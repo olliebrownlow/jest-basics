@@ -45,3 +45,8 @@ test('should be under 1000', () => {
   const load2 = 500;
   expect(load1 + load2).toBeLessThanOrEqual(1000);
 });
+
+// Regex
+test('there is no I in team', () => {
+  expect('team').not.toMatch(/I/i); //the "i" makes it case insensitive
+});
