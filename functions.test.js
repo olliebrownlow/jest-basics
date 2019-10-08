@@ -50,3 +50,9 @@ test('should be under 1000', () => {
 test('there is no I in team', () => {
   expect('team').not.toMatch(/I/i); //the "i" makes it case insensitive
 });
+
+// Arrays
+test('"admin" should be in usernames array', () => {
+  usernames = ['Lily', 'Clarice', 'admin'];
+  expect(usernames).toContain('admin');
+});
