@@ -56,3 +56,12 @@ test('"admin" should be in usernames array', () => {
   usernames = ['Lily', 'Clarice', 'admin'];
   expect(usernames).toContain('admin');
 });
+
+// Working with async data
+test('user fetched name should be "Leanne Graham"', () => {
+  expect.assertions(1);
+  return functions.fetchUser()
+  .then(data => {
+    expect(data.name).toEqual('Leanne Graham');
+  });
+});
