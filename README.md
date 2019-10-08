@@ -17,3 +17,15 @@ For basic js testing using jest
 8. Run `npm test` to see the test fail
  - follow the errors to implement the function
 9. Refactor and repeat from 7
+
+## Watch mode
+
+Jest can watch your tests and run them automatically as you edit and save your code. For this functionality add a `--watchAll` flag to your package.json scripts:
+
+```
+"scripts": {
+  "test": "jest",
+  "testwatch": "jest --watchAll"
+},
+```
+and run `npm run testwatch`
