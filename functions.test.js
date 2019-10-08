@@ -5,7 +5,7 @@ test('adding 2 + 2 equals 4', () => {
   expect(functions.add(2, 2)).toBe(4);
 });
 
-// toEqual works in other cases
+// toEqual works in other cases (objects, arrays etc.)
 test('user should be Ollie Brownlow', () => {
   expect(functions.createUser()).toEqual({
     firstName: 'Ollie',
@@ -31,4 +31,17 @@ test('should be null', () => {
 
 test('should be falsy', () => {
   expect(functions.checkValue(null)).toBeFalsy();
+});
+
+// Less than and greater than (or equal)
+test('should be under 1000', () => {
+  const load1 = 500;
+  const load2 = 499;
+  expect(load1 + load2).toBeLessThan(1000);
+});
+
+test('should be under 1000', () => {
+  const load1 = 500;
+  const load2 = 500;
+  expect(load1 + load2).toBeLessThanOrEqual(1000);
 });
